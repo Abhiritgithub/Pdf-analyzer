@@ -1,0 +1,120 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.main {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1rem 0 2rem;
+}
+
+.hero {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.6rem 0 0.3rem;
+}
+
+.badge {
+  width: fit-content;
+  margin: 0;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--panel);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.hero h2 {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(2.2rem, 5vw, 4.3rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.description {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.workspace {
+  display: grid;
+  gap: 1rem;
+}
+
+.errorBanner {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: 1rem;
+  color: #fecaca;
+  background: rgba(248, 113, 113, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.emptyState {
+  padding: 1.5rem;
+  border: 1px dashed var(--panel-border);
+  border-radius: 1.5rem;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.emptyTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.emptyText {
+  margin: 0;
+  color: var(--muted);
+}
+
+.glowOne,
+.glowTwo {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.glowOne {
+  top: -5rem;
+  right: -6rem;
+  width: 22rem;
+  height: 22rem;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.16), transparent 60%);
+}
+
+.glowTwo {
+  bottom: -7rem;
+  left: -4rem;
+  width: 18rem;
+  height: 18rem;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.12), transparent 60%);
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 1.2rem, 1120px);
+  }
+
+  .hero h2 {
+    max-width: 100%;
+  }
+}
