@@ -109,6 +109,7 @@ export default function HomePage() {
     setUrl('');
     setAnalysis(null);
     setError('');
+    setRecentUrls([]);
     showToast('Form cleared.', 'success');
   };
 

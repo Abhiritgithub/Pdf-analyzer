@@ -98,7 +98,12 @@ async function analyzePdfText(documentText) {
     }
 
     const status = error.response?.status;
-    const apiMessage = error.response?.data?.error?.message;
+
+console.log("========== GEMINI ERROR ==========");
+console.log(error.response?.data);
+console.log("==================================");
+
+const apiMessage = error.response?.data?.error?.message;
 
     if (status === 400) {
       throw new HttpError(502, apiMessage || 'Gemini rejected the analysis request.');
