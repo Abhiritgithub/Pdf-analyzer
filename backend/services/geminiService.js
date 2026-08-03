@@ -98,20 +98,21 @@ async function analyzePdfText(documentText) {
     }
 
     const status = error.response?.status;
+    const apiMessage = error.response?.data?.error?.message;
 
     if (status === 400) {
-      throw new HttpError(502, 'Gemini rejected the analysis request.');
+      throw new HttpError(502, apiMessage || 'Gemini rejected the analysis request.');
     }
 
     if (status === 401 || status === 403) {
-      throw new HttpError(502, 'Gemini API authentication failed.');
+      throw new HttpError(502, apiMessage || 'Gemini API authentication failed. Check the API key and project access.');
     }
 
     if (status === 429) {
-      throw new HttpError(503, 'Gemini rate limit reached. Please try again shortly.');
+      throw new HttpError(503, apiMessage || 'Gemini rate limit reached or quota is exhausted. Please try again shortly.');
     }
 
-    throw new HttpError(502, 'Gemini API error while generating the analysis.');
+    throw new HttpError(502, apiMessage || 'Gemini API error while generating the analysis.');
   }
 }
 

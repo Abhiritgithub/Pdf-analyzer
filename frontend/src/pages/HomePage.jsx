@@ -154,6 +154,40 @@ export default function HomePage() {
             )}
           </section>
         </main>
+
+        <footer className={styles.footer}>
+          <div className={styles.footerGrid}>
+            <div className={styles.footerBrand}>
+              <p className={styles.footerLabel}>PDF Analyzer AI</p>
+              <p className={styles.footerText}>
+                Analyze research papers using Google Gemini AI. Generate summaries, identify document types, extract authors, and surface key insights.
+              </p>
+            </div>
+
+            <div className={styles.footerColumn}>
+              <p className={styles.footerHeading}>Features</p>
+              <ul className={styles.footerList}>
+                <li>AI Summary</li>
+                <li>PDF Analysis</li>
+                <li>Research Papers</li>
+                <li>Gemini AI</li>
+              </ul>
+            </div>
+
+            <div className={styles.footerColumn}>
+              <p className={styles.footerHeading}>Developers</p>
+              <ul className={styles.footerList}>
+                <li>Abhishek Sahu</li>
+              </ul>
+           
+            </div>
+          </div>
+
+          <div className={styles.footerBottom}>
+            <p>© 2026 PDF Analyzer AI. All rights reserved.</p>
+            <p>Built with React • Node.js • Gemini AI</p>
+          </div>
+        </footer>
       </div>
 
       <Toast message={toast.message} type={toast.type} visible={toast.visible} />

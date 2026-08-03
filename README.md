@@ -90,7 +90,7 @@ Backend variables:
 - `BACKEND_PORT` - alternative server port variable
 - `CORS_ORIGIN` - allowed frontend origin(s), comma-separated if needed
 - `GEMINI_API_KEY` - Gemini API key, never expose this to the frontend
-- `GEMINI_MODEL` - Gemini model name, default `gemini-2.5-flash`
+- `GEMINI_MODEL` - Gemini model name, default `gemini-2.0-flash`
 - `GEMINI_TIMEOUT_MS` - Gemini request timeout
 - `PDF_DOWNLOAD_TIMEOUT_MS` - timeout for downloading PDFs
 - `PDF_MAX_SIZE_BYTES` - maximum PDF download size
